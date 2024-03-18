@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:splash_screen/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,13 +10,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(),
+      home: SplashScreen(),
     );
   }
 }
@@ -34,7 +31,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: const Color(0xFF401F71),
         title: const Text(
-          'Splash Screen',
+          'Home Screen',
           style: TextStyle(
             fontSize: 22,
             fontWeight: FontWeight.bold,
@@ -47,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Splash Screen',
+              'Home Screen',
             ),
           ],
         ),
